@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SpeakUp — English Fluency in 20 Days</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+<!-- SCREEN: HOME -->
+<div id="screen-home" class="screen active">
+  <div class="home-bg">
+    <div class="home-container">
+      <div class="logo">SpeakUp</div>
+      <div class="hero-section">
+        <div class="hero-badge">20 Days • 30 Min/Day • 100% English</div>
+        <h1 class="hero-title">Speak English.<br>Confidently.</h1>
+        <p class="hero-desc">From basic sentences to office-ready communication. A game-based learning journey designed for real life — not boring classrooms.</p>
+        <div class="hero-stats">
+          <div class="h-stat"><span class="h-num">200+</span><span class="h-label">Words learned</span></div>
+          <div class="h-stat"><span class="h-num">20</span><span class="h-label">Daily lessons</span></div>
+          <div class="h-stat"><span class="h-num">7</span><span class="h-label">Activity types</span></div>
+        </div>
+        <button class="btn-primary" onclick="goTo('screen-dashboard')">Start Learning Free →</button>
+      </div>
+      <div class="home-cards">
+        <div class="feat-card">
+          <span class="feat-icon">🎮</span>
+          <div class="feat-title">Game-based</div>
+          <div class="feat-desc">XP, streaks, badges and levels keep you motivated every day</div>
+        </div>
+        <div class="feat-card">
+          <span class="feat-icon">🗣️</span>
+          <div class="feat-title">Speaking focus</div>
+          <div class="feat-desc">Every lesson includes real speak-aloud and conversation practice</div>
+        </div>
+        <div class="feat-card">
+          <span class="feat-icon">💼</span>
+          <div class="feat-title">Office ready</div>
+          <div class="feat-desc">Emails, meetings, phone calls — real workplace English covered</div>
+        </div>
+        <div class="feat-card">
+          <span class="feat-icon">⚡</span>
+          <div class="feat-title">30 min/day</div>
+          <div class="feat-desc">Short daily sessions that fit into any busy schedule</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SCREEN: DASHBOARD -->
+<div id="screen-dashboard" class="screen">
+  <div class="app-layout">
+    <nav class="sidebar">
+      <div class="sidebar-logo">SpeakUp</div>
+      <div class="nav-links">
+        <button class="nav-link active" onclick="showDashTab('tab-home',this)">🏠 Dashboard</button>
+        <button class="nav-link" onclick="showDashTab('tab-lessons',this)">📚 Lessons</button>
+        <button class="nav-link" onclick="showDashTab('tab-vocab',this)">🃏 Vocabulary</button>
+        <button class="nav-link" onclick="showDashTab('tab-errors',this)">📓 Error Notebook</button>
+        <button class="nav-link" onclick="showDashTab('tab-progress',this)">📊 My Progress</button>
+      </div>
+      <div class="sidebar-bottom">
+        <button class="nav-link" onclick="goTo('screen-home')">← Home</button>
+      </div>
+    </nav>
+    <main class="main-content">
+
+      <!-- TAB: HOME -->
+      <div id="tab-home" class="dash-tab active">
+        <div class="dash-top">
+          <div>
+            <h2 class="dash-greeting">Good morning, Rahul 👋</h2>
+            <p class="dash-sub">Day 5 of 20 &nbsp;•&nbsp; 🔥 4-day streak &nbsp;•&nbsp; Level: Sprout</p>
+          </div>
+          <div class="avatar">RK</div>
+        </div>
+        <div class="stat-grid">
+          <div class="stat-card"><div class="stat-l">XP Total</div><div class="stat-v">340</div></div>
+          <div class="stat-card"><div class="stat-l">Streak</div><div class="stat-v">4 🔥</div></div>
+          <div class="stat-card"><div class="stat-l">Words</div><div class="stat-v">40</div></div>
+          <div class="stat-card"><div class="stat-l">Quiz avg</div><div class="stat-v">78%</div></div>
+        </div>
+        <div class="today-card">
+          <div class="today-icon">🛒</div>
+          <div class="today-info">
+            <div class="today-title">Day 5 — Market: Real Shopping Talk</div>
+            <div class="today-sub">Grammar: How much / How many &nbsp;•&nbsp; 30 min &nbsp;•&nbsp; 3 activities left</div>
+            <div class="prog-bar"><div class="prog-fill" style="width:40%"></div></div>
+          </div>
+          <button class="btn-green" onclick="goTo('screen-lesson')">Continue →</button>
+        </div>
+        <div class="section-h">This week</div>
+        <div class="streak-row">
+          <div class="s-dot s-done">D1</div><div class="s-dot s-done">D2</div>
+          <div class="s-dot s-done">D3</div><div class="s-dot s-done">D4</div>
+          <div class="s-dot s-now">D5</div><div class="s-dot s-lock">D6</div>
+          <div class="s-dot s-lock">D7</div><div class="s-dot s-lock">D8</div>
+          <div class="s-dot s-lock">D9</div><div class="s-dot s-lock">D10</div>
+        </div>
+        <div class="section-h">Badges earned</div>
+        <div class="badge-row">
+          <span class="badge earned">🗣️ First Speaker</span>
+          <span class="badge earned">🔥 3-Day Streak</span>
+          <span class="badge locked">📞 Phone Hero</span>
+          <span class="badge locked">🏆 Week 1 Champ</span>
+          <span class="badge locked">📧 Email Pro</span>
+          <span class="badge locked">🎓 SpeakUp Grad</span>
+        </div>
+      </div>
+
+      <!-- TAB: LESSONS -->
+      <div id="tab-lessons" class="dash-tab">
+        <h2 class="tab-title">All 20 Lessons</h2>
+        <div class="lessons-grid" id="lessons-grid"></div>
+      </div>
+
+      <!-- TAB: VOCAB -->
+      <div id="tab-vocab" class="dash-tab">
+        <h2 class="tab-title">Vocabulary Flashcards</h2>
+        <p class="tab-sub">Tap the card to reveal the meaning. Move through all your learned words.</p>
+        <div class="vocab-card" id="vcard">
+          <div class="v-word" id="vword">Negotiate</div>
+          <div class="v-detail" id="vdetail" style="display:none">
+            <div class="v-mean" id="vmean"></div>
+            <div class="v-ex" id="vex"></div>
+          </div>
+          <button class="btn-flip" id="vbtn" onclick="flipVocab()">Show meaning</button>
+        </div>
+        <div class="vocab-nav">
+          <button class="btn-outline" onclick="nextVocab(-1)">← Prev</button>
+          <span class="vocab-ctr" id="vctr">1 / 8</span>
+          <button class="btn-outline" onclick="nextVocab(1)">Next →</button>
+        </div>
+      </div>
+
+      <!-- TAB: ERROR NOTEBOOK -->
+      <div id="tab-errors" class="dash-tab">
+        <h2 class="tab-title">Error Notebook</h2>
+        <p class="tab-sub">Your mistakes are saved here so you can learn from them — not feel bad about them.</p>
+        <div class="err-list">
+          <div class="err-item">
+            <div class="err-wrong">She don't know the answer.</div>
+            <div class="err-right">✓ She doesn't know the answer.</div>
+            <div class="err-note">He / She / It → always use "doesn't", not "don't".</div>
+          </div>
+          <div class="err-item">
+            <div class="err-wrong">I am knowing her since 2020.</div>
+            <div class="err-right">✓ I have known her since 2020.</div>
+            <div class="err-note">"Know" is a state verb — never use it in the -ing form.</div>
+          </div>
+          <div class="err-item">
+            <div class="err-wrong">Yesterday I go to the market.</div>
+            <div class="err-right">✓ Yesterday I went to the market.</div>
+            <div class="err-note">Use past tense for completed actions. "Go" becomes "went".</div>
+          </div>
+          <div class="err-item">
+            <div class="err-wrong">Can you explain me this?</div>
+            <div class="err-right">✓ Can you explain this to me?</div>
+            <div class="err-note">"Explain" needs "to" before the person: explain X to Y.</div>
+          </div>
+          <div class="err-item">
+            <div class="err-wrong">I have did my work.</div>
+            <div class="err-right">✓ I have done my work.</div>
+            <div class="err-note">After "have/has", use the past participle — "done", not "did".</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB: PROGRESS -->
+      <div id="tab-progress" class="dash-tab">
+        <h2 class="tab-title">My Progress</h2>
+        <div class="stat-grid">
+          <div class="stat-card"><div class="stat-l">Days done</div><div class="stat-v">4/20</div></div>
+          <div class="stat-card"><div class="stat-l">Quiz avg</div><div class="stat-v">78%</div></div>
+          <div class="stat-card"><div class="stat-l">Speak tasks</div><div class="stat-v">4/4</div></div>
+          <div class="stat-card"><div class="stat-l">Confidence</div><div class="stat-v">62%</div></div>
+        </div>
+        <div class="section-h">Skill breakdown</div>
+        <div class="skill-bars">
+          <div class="skill-row"><div class="skill-label"><span>Grammar accuracy</span><span>72%</span></div><div class="prog-bar"><div class="prog-fill" style="width:72%;background:#7F77DD"></div></div></div>
+          <div class="skill-row"><div class="skill-label"><span>Vocabulary retained</span><span>40 words</span></div><div class="prog-bar"><div class="prog-fill" style="width:20%;background:#1D9E75"></div></div></div>
+          <div class="skill-row"><div class="skill-label"><span>Speaking confidence</span><span>62%</span></div><div class="prog-bar"><div class="prog-fill" style="width:62%;background:#BA7517"></div></div></div>
+          <div class="skill-row"><div class="skill-label"><span>Conversation fluency</span><span>45%</span></div><div class="prog-bar"><div class="prog-fill" style="width:45%;background:#D85A30"></div></div></div>
+          <div class="skill-row"><div class="skill-label"><span>Office communication</span><span>Unlocks Day 6</span></div><div class="prog-bar"><div class="prog-fill" style="width:0%"></div></div></div>
+        </div>
+        <div class="section-h">XP Progress</div>
+        <div class="xp-track">
+          <div class="xp-info"><span>Sprout Level</span><span>340 / 500 XP</span></div>
+          <div class="xp-bar-bg"><div class="xp-bar-fill" style="width:68%"></div></div>
+          <div class="xp-next">160 XP to unlock Speaker level</div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+</div>
+
+<!-- SCREEN: LESSON (Day 1) -->
+<div id="screen-lesson" class="screen">
+  <div class="lesson-wrap">
+    <div class="lesson-topbar">
+      <button class="back-btn" onclick="goTo('screen-dashboard')">← Back</button>
+      <div class="lesson-progress-wrap">
+        <div class="lesson-prog-bar"><div class="lesson-prog-fill" id="lesson-prog" style="width:0%"></div></div>
+        <span class="lesson-prog-label" id="lesson-prog-label">0 / 7</span>
+      </div>
+      <div class="xp-pill">+50 XP</div>
+    </div>
+    <div class="lesson-body" id="lesson-body"></div>
+  </div>
+</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>
